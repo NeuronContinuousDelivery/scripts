@@ -13,7 +13,7 @@ IMAGE_NAME=${NAME}:${VERSION}
 CONTAINER_NAME=${NAME}
 TAR=${NAME}_${VERSION}.tar
 
-OAUTH_URL=${OAUTH_URL}
+API_GATEWAY=${PROD_IP}:8080
 
 #clean
 if  [ ! -d "_output" ]; then
@@ -31,7 +31,7 @@ GOOS=linux GOARCH=amd64 go build -o ./_output/release/neuron-agent .
 docker build -t ${IMAGE_NAME} -f ./_output/release/Dockerfile \
 --build-arg ENV=${ENV} \
 --build-arg DB=${DB} \
---build-arg OAUTH_URL=${OAUTH_URL} \
+--build-arg API_GATEWAY=${API_GATEWAY} \
 .
 
 #docker tar
