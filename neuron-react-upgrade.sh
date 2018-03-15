@@ -6,7 +6,6 @@ mkdir ./src/_common
 cp -r ~/work/neuron/src/github.com/NeuronFramework/ui/web/src/_common/* ./src/_common/
 
 #模版
-rm tsconfig.json tsconfig.test.json tslint.json package.json
 cp -r ~/work/neuron/src/github.com/NeuronContinuousDelivery/scripts/react-template/* ./
 
 #npm 升级

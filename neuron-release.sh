@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-#ENV in Dockerfile
 PORT=${PORT}
-ENV=PROD
-DB="root:123456@tcp(106.14.204.11:3307)"
-
-#image ENV
 PROD_IP=${PROD_IP}
 NAME=${NAME}
 VERSION=${VERSION}
+
+#ENV in Dockerfile
+ENV=PROD
+DB="root:123456@tcp(106.14.204.11:3307)"
+
+#image vars
 IMAGE_NAME=${NAME}:${VERSION}
 CONTAINER_NAME=${NAME}
 TAR=${NAME}_${VERSION}.tar
