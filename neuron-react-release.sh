@@ -4,7 +4,7 @@
 NAME=${NAME}
 VERSION=${VERSION}
 PORT=${PORT}
-WEB_PATH=${WEB_PATH}
+PUBLIC_URL=${PUBLIC_URL}
 
 #sys env
 PROD_IP=${PROD_IP}
@@ -19,7 +19,7 @@ TAR=${NAME}_${VERSION}.tar
 if  [  -d "build" ]; then
   rm -rf build
 fi
-PUBLIC_URL=${WEB_PATH} WEB_HOST=${WEB_HOST} npm run build
+PUBLIC_URL=${PUBLIC_URL} WEB_HOST=${WEB_HOST} npm run build
 
 #docker build
 docker build -t ${IMAGE_NAME} -f ./Dockerfile .
