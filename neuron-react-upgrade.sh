@@ -7,6 +7,7 @@ cp -r ~/work/neuron/src/github.com/NeuronFramework/ui/web/src/_common/* ./src/_c
 
 #模版
 cp -r ~/work/neuron/src/github.com/NeuronContinuousDelivery/scripts/react-template/* ./
+cp -r ~/work/neuron/src/github.com/NeuronContinuousDelivery/scripts/react-template/.env ./
 
 #npm 升级
 #npm upgrade
