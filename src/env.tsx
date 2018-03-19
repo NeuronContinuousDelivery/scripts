@@ -8,4 +8,4 @@ export const env: Env = {
     host: process.env.REACT_APP_WEB_HOST ? process.env.REACT_APP_WEB_HOST : ''
 };
 
-console.log(process.env.REACT_APP_WEB_PATH, process.env.REACT_APP_WEB_HOST);
+console.log(process.env.REACT_APP_WEB_PATH, process.env.REACT_APP_WEB_HOST, process.env.PUBLIC_URL);

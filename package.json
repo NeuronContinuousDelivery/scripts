@@ -2,6 +2,7 @@
   "name": "neuron-web-template",
   "version": "v1.0.0",
   "private": true,
+  "homepage": "https://myapp.com/directory-name",
   "dependencies": {
     "material-ui": "^1.0.0-beta.36",
     "material-ui-icons": "^1.0.0-beta.36",
