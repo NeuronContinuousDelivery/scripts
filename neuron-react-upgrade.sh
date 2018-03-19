@@ -9,4 +9,4 @@ cp -r ~/work/neuron/src/github.com/NeuronFramework/ui/web/src/_common/* ./src/_c
 cp -r ~/work/neuron/src/github.com/NeuronContinuousDelivery/scripts/react-template/* ./
 
 #npm 升级
-npm upgrade
+#npm upgrade
