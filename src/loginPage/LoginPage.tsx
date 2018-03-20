@@ -119,7 +119,7 @@ class LoginPage extends React.Component<Props, State> {
                 flexDirection: 'column',
                 alignItems: 'center'
             }}>
-                <div style={{width: '300px'}}>
+                <div style={{width: '300px', marginTop: '24px'}}>
                     {this.renderTabs()}
                     <div style={{marginTop: '5px', height: '10px'}}>
                         {this.renderErrorMessage()}
