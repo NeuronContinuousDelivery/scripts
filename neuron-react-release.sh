@@ -8,7 +8,7 @@ PUBLIC_URL=${PUBLIC_URL}
 
 #sys env
 PROD_IP=${PROD_IP}
-WEB_HOST="http://106.14.204.11:8080"
+REACT_APP_WEB_HOST="http://106.14.204.11:8080"
 
 #image var
 IMAGE_NAME=${NAME}:${VERSION}
@@ -19,7 +19,7 @@ TAR=${NAME}_${VERSION}.tar
 if  [  -d "build" ]; then
   rm -rf build
 fi
-PUBLIC_URL=${PUBLIC_URL} WEB_HOST=${WEB_HOST} npm run build
+PUBLIC_URL=${PUBLIC_URL} REACT_APP_WEB_HOST=${REACT_APP_WEB_HOST} npm run build
 
 #docker build
 docker build -t ${IMAGE_NAME} -f ./Dockerfile .
