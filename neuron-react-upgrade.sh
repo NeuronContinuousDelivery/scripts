@@ -10,4 +10,4 @@ cp -r ~/work/neuron/src/github.com/NeuronContinuousDelivery/scripts/react-templa
 cp -r ~/work/neuron/src/github.com/NeuronContinuousDelivery/scripts/react-template/.env ./
 
 #npm 升级
-#npm upgrade
+npm upgrade
