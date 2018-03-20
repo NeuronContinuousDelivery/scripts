@@ -1,15 +1,16 @@
 FROM alpine:latest
 
-#安装nginx
-RUN apk --update add nginx
+ADD ./_output/release /usr/local/bin/
 
-#nginx配置文件
-COPY ./nginx.conf /etc/nginx/nginx.conf
+ARG ENV
+ENV ENV=$ENV
 
-#nginx.pid
-RUN mkdir -p /usr/local/nginx/logs/
+ARG DB
+ENV DB=$DB
 
-#拷贝web
-ADD ./build /usr/share/nginx/html/
+ARG API_GATEWAY
+ENV API_GATEWAY=${API_GATEWAY}
 
-ENTRYPOINT nginx -g "daemon off;"
+ENV PORT=8080
+
+ENTRYPOINT neuron-agent
