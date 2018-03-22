@@ -4,7 +4,7 @@
 NAME=${NAME}
 VERSION=${VERSION}
 PORT=${PORT}
-PUBLIC_URL=${PUBLIC_URL}
+PUBLIC_URL=https://neuron-public.oss-cn-shanghai.aliyuncs.com/web/${NAME}
 REACT_APP_WEB_PATH=${REACT_APP_WEB_PATH}
 
 #sys env
