@@ -5,6 +5,7 @@ NAME=${NAME}
 VERSION=${VERSION}
 PORT=${PORT}
 PUBLIC_URL=${PUBLIC_URL}
+REACT_APP_WEB_PATH=${REACT_APP_WEB_PATH}
 
 #sys env
 PROD_IP=${PROD_IP}
@@ -19,7 +20,11 @@ TAR=${NAME}_${VERSION}.tar
 if  [  -d "build" ]; then
   rm -rf build
 fi
-PUBLIC_URL=${PUBLIC_URL} REACT_APP_WEB_HOST=${REACT_APP_WEB_HOST} npm run build
+
+PUBLIC_URL=${PUBLIC_URL} \
+REACT_APP_WEB_PATH=${REACT_APP_WEB_PATH} \
+REACT_APP_WEB_HOST=${REACT_APP_WEB_HOST} \
+npm run build
 
 #docker build
 docker build -t ${IMAGE_NAME} -f ./Dockerfile .
