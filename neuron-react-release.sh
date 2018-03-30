@@ -26,6 +26,9 @@ REACT_APP_WEB_PATH=${REACT_APP_WEB_PATH} \
 REACT_APP_WEB_HOST=${REACT_APP_WEB_HOST} \
 npm run build
 
+#upload static files to aliyun oss
+ossutilmac64 cp -f -r ./build/ oss://neuron-public/web/${NAME}/ --exclude *.js.map
+
 #docker build
 docker build -t ${IMAGE_NAME} -f ./Dockerfile .
 
