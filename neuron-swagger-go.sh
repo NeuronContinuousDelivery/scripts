@@ -3,4 +3,4 @@
 rm -rf ./gen/
 mkdir gen
 
-swagger generate server -f swagger.json -t ./gen/
+swagger generate server --exclude-main -f swagger.json -t ./gen/
